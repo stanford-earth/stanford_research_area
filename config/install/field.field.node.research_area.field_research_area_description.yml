@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_area_description
+    - node.type.research_area
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    content_editor: content_editor
+    markdown: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.research_area.field_research_area_description
+field_name: field_research_area_description
+entity_type: node
+bundle: research_area
+label: Description
+description: 'Two column description for the research/challenge area.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

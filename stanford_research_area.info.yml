@@ -1,0 +1,27 @@
+name: 'Research Area Content Type'
+description: 'This is a content type (and associated taxonomy vocabulary) for research and challenge area landing pages.'
+type: module
+core: 8.x
+dependencies:
+  - allowed_formats
+  - entity_reference_revisions
+  - field
+  - field_group
+  - file
+  - filefield_paths
+  - image
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - rdf
+  - scheduler
+  - stanford_paragraph_hero_banner
+  - stanford_paragraph_postcard
+  - taxonomy
+  - text
+  - user
+  - video_embed_field
+  - viewfield
+  - views
+version: 8.x-1.0-alpha1

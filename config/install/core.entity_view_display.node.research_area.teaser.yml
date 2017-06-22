@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.research_area.field_research_area_courses
+    - field.field.node.research_area.field_research_area_desc_head
+    - field.field.node.research_area.field_research_area_description
+    - field.field.node.research_area.field_research_area_groups_view
+    - field.field.node.research_area.field_research_area_hero
+    - field.field.node.research_area.field_research_area_related
+    - field.field.node.research_area.field_research_area_spotlights
+    - field.field.node.research_area.field_research_area_term
+    - field.field.node.research_area.field_research_area_thumbnail
+    - field.field.node.research_area.field_research_area_video
+    - node.type.research_area
+  module:
+    - user
+id: node.research_area.teaser
+targetEntityType: node
+bundle: research_area
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_research_area_courses: true
+  field_research_area_desc_head: true
+  field_research_area_description: true
+  field_research_area_groups_view: true
+  field_research_area_hero: true
+  field_research_area_related: true
+  field_research_area_spotlights: true
+  field_research_area_term: true
+  field_research_area_thumbnail: true
+  field_research_area_video: true

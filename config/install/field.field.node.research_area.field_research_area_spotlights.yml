@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_area_spotlights
+    - node.type.research_area
+    - paragraphs.paragraphs_type.stanford_postcard
+  module:
+    - entity_reference_revisions
+id: node.research_area.field_research_area_spotlights
+field_name: field_research_area_spotlights
+entity_type: node
+bundle: research_area
+label: Spotlights
+description: 'Any number of postcards spotlighting specific research groups or activities.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      stanford_postcard: stanford_postcard
+    target_bundles_drag_drop:
+      stanford_buttons:
+        weight: 9
+        enabled: false
+      stanford_callout_text:
+        weight: 10
+        enabled: false
+      stanford_cta:
+        weight: 11
+        enabled: false
+      stanford_cta_list:
+        weight: 12
+        enabled: false
+      stanford_paragraph_hero_banner:
+        weight: 13
+        enabled: false
+      stanford_postcard:
+        enabled: true
+        weight: 14
+      stanford_textarea:
+        weight: 15
+        enabled: false
+      stanford_wysiwyg:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

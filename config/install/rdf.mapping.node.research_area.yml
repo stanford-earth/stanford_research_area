@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_area
+  module:
+    - node
+id: node.research_area
+targetEntityType: node
+bundle: research_area
+types:
+  - ''
+fieldMappings: {  }

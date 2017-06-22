@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_area_courses
+    - node.type.research_area
+    - paragraphs.paragraphs_type.stanford_paragraph_hero_banner
+  module:
+    - entity_reference_revisions
+id: node.research_area.field_research_area_courses
+field_name: field_research_area_courses
+entity_type: node
+bundle: research_area
+label: 'Courses Banner'
+description: 'A "hero" paragraph acting as a Courses banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      stanford_paragraph_hero_banner: stanford_paragraph_hero_banner
+    target_bundles_drag_drop:
+      stanford_buttons:
+        weight: 9
+        enabled: false
+      stanford_callout_text:
+        weight: 10
+        enabled: false
+      stanford_cta:
+        weight: 11
+        enabled: false
+      stanford_cta_list:
+        weight: 12
+        enabled: false
+      stanford_paragraph_hero_banner:
+        enabled: true
+        weight: 13
+      stanford_postcard:
+        weight: 14
+        enabled: false
+      stanford_textarea:
+        weight: 15
+        enabled: false
+      stanford_wysiwyg:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

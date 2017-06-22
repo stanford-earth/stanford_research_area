@@ -1,0 +1,224 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_area.field_research_area_courses
+    - field.field.node.research_area.field_research_area_desc_head
+    - field.field.node.research_area.field_research_area_description
+    - field.field.node.research_area.field_research_area_groups_view
+    - field.field.node.research_area.field_research_area_hero
+    - field.field.node.research_area.field_research_area_related
+    - field.field.node.research_area.field_research_area_spotlights
+    - field.field.node.research_area.field_research_area_term
+    - field.field.node.research_area.field_research_area_thumbnail
+    - field.field.node.research_area.field_research_area_video
+    - image.style.thumbnail
+    - node.type.research_area
+  module:
+    - field_group
+    - image
+    - paragraphs
+    - path
+    - scheduler
+    - text
+    - video_embed_field
+    - viewfield
+third_party_settings:
+  field_group:
+    group_main_hero:
+      children:
+        - field_research_area_hero
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Main Hero'
+    group_two_column_description:
+      children:
+        - field_research_area_desc_head
+        - field_research_area_description
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Two-Column Description'
+    group_spotlights:
+      children:
+        - field_research_area_spotlights
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Spotlights
+    group_courses_banner:
+      children:
+        - field_research_area_courses
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Courses Banner'
+id: node.research_area.default
+targetEntityType: node
+bundle: research_area
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_research_area_courses:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_research_area_desc_head:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_research_area_description:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_research_area_groups_view:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
+    region: content
+  field_research_area_hero:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_research_area_related:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
+    region: content
+  field_research_area_spotlights:
+    type: entity_reference_paragraphs
+    weight: 8
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_research_area_term:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_research_area_thumbnail:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_research_area_video:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 14
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

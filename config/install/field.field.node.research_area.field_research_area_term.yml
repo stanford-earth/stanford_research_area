@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_area_term
+    - node.type.research_area
+    - taxonomy.vocabulary.research_areas
+id: node.research_area.field_research_area_term
+field_name: field_research_area_term
+entity_type: node
+bundle: research_area
+label: 'Research Area Term'
+description: 'Link this research/challenge area page back to a specific taxonomy term in the Research Areas vocabulary.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_areas: research_areas
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
