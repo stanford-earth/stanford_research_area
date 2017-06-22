@@ -1,4 +1,4 @@
-# [Stanford Module Example](https://github.com/SU-SWS/stanford_module_example)
+# [Stanford Research Area](https://github.com/stanford-earth/stanford_research_area)
 ##### Version: 8.x-1.x
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
@@ -8,9 +8,7 @@ Changelog: [Changelog.txt](CHANGELOG.txt)
 Description
 ---
 
-The Stanford Module Example module is used to do some things. Please put a
-description of what this module does so that a new developer can get a quick
-understanding about what this module does.
+The Stanford Research Area is a feature for the Research Area content type for the Stanford Earth project.
 
 Accessibility
 ---
