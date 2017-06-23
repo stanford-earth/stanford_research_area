@@ -1,4 +1,4 @@
-name: 'Research Area Content Type'
+name: 'Stanford Research Area Content Type'
 description: 'This is a content type (and associated taxonomy vocabulary) for research and challenge area landing pages.'
 type: module
 core: 8.x
