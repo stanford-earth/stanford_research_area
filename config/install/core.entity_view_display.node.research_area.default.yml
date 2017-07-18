@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.research_area.field_research_area_challenge
     - field.field.node.research_area.field_research_area_courses
     - field.field.node.research_area.field_research_area_desc_head
     - field.field.node.research_area.field_research_area_description
@@ -25,6 +26,16 @@ targetEntityType: node
 bundle: research_area
 mode: default
 content:
+  field_research_area_challenge:
+    weight: 111
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_research_area_courses:
     type: entity_reference_revisions_entity_view
     weight: 108

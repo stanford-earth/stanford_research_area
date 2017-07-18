@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_area_challenge
+    - node.type.research_area
+id: node.research_area.field_research_area_challenge
+field_name: field_research_area_challenge
+entity_type: node
+bundle: research_area
+label: 'Is this a Challenge Area?'
+description: 'Only check if this research area is also one of the main Challenge Areas featured on the home page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

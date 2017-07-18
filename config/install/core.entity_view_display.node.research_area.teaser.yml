@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.research_area.field_research_area_challenge
     - field.field.node.research_area.field_research_area_courses
     - field.field.node.research_area.field_research_area_desc_head
     - field.field.node.research_area.field_research_area_description
@@ -13,18 +14,58 @@ dependencies:
     - field.field.node.research_area.field_research_area_term
     - field.field.node.research_area.field_research_area_thumbnail
     - field.field.node.research_area.field_research_area_video
+    - image.style.medium
     - node.type.research_area
   module:
+    - ds
+    - field_formatter_class
+    - image
+    - panelizer
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_paragraph_filmstrip
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      content:
+        - field_research_area_thumbnail
+      title:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.research_area.teaser
 targetEntityType: node
 bundle: research_area
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_research_area_thumbnail:
+    type: image
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
 hidden:
+  field_research_area_challenge: true
   field_research_area_courses: true
   field_research_area_desc_head: true
   field_research_area_description: true
@@ -33,5 +74,5 @@ hidden:
   field_research_area_related: true
   field_research_area_spotlights: true
   field_research_area_term: true
-  field_research_area_thumbnail: true
   field_research_area_video: true
+  links: true
