@@ -16,53 +16,49 @@ dependencies:
     - node.type.research_area
   module:
     - entity_reference_revisions
-    - image
+    - panelizer
     - text
     - user
     - video_embed_field
     - viewfield
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.research_area.default
 targetEntityType: node
 bundle: research_area
 mode: default
 content:
-  field_research_area_challenge:
-    weight: 111
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_research_area_courses:
     type: entity_reference_revisions_entity_view
-    weight: 108
-    label: above
+    weight: 5
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_research_area_desc_head:
-    weight: 104
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_research_area_description:
-    weight: 105
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_research_area_groups_view:
-    weight: 109
-    label: above
+    weight: 6
+    label: hidden
     settings:
       view_title: hidden
       always_build_output: 0
@@ -72,16 +68,16 @@ content:
     region: content
   field_research_area_hero:
     type: entity_reference_revisions_entity_view
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_research_area_related:
-    weight: 110
-    label: above
+    weight: 7
+    label: hidden
     settings:
       view_title: hidden
       always_build_output: 0
@@ -91,33 +87,16 @@ content:
     region: content
   field_research_area_spotlights:
     type: entity_reference_revisions_entity_view
-    weight: 107
-    label: above
+    weight: 4
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_research_area_term:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_research_area_thumbnail:
-    weight: 101
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_research_area_video:
-    weight: 106
-    label: above
+    weight: 3
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -126,7 +105,8 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  field_research_area_challenge: true
+  field_research_area_term: true
+  field_research_area_thumbnail: true
+  links: true

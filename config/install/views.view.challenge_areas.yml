@@ -2,10 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_research_area_thumbnail
+    - image.style.component_film_card
     - node.type.research_area
   module:
+    - image
     - node
+    - ui_patterns_views
     - user
 id: challenge_areas
 label: 'Challenge Areas'
@@ -55,9 +58,32 @@ display:
       style:
         type: default
       row:
-        type: 'entity:node'
+        type: ui_patterns
         options:
-          view_mode: teaser
+          default_field_elements: 0
+          inline:
+            title: 0
+            field_research_area_thumbnail: 0
+            path: 0
+          separator: ''
+          hide_empty: 0
+          pattern: film_card
+          pattern_mapping:
+            'views_row:title':
+              destination: title
+              weight: 0
+              plugin: views_row
+              source: title
+            'views_row:field_research_area_thumbnail':
+              destination: image
+              weight: 1
+              plugin: views_row
+              source: field_research_area_thumbnail
+            'views_row:path':
+              destination: link
+              weight: 2
+              plugin: views_row
+              source: path
       fields:
         title:
           id: title
@@ -106,6 +132,121 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_research_area_thumbnail:
+          id: field_research_area_thumbnail
+          table: node__field_research_area_thumbnail
+          field: field_research_area_thumbnail
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: component_film_card
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        path:
+          id: path
+          table: node
+          field: path
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: '<a>'
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          absolute: false
+          entity_type: node
+          plugin_id: node_path
       filters:
         status:
           value: '1'
@@ -167,10 +308,24 @@ display:
       title: 'Challenge Areas'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Sorry, No results found.'
+            format: content_editor
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      show_admin_links: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -178,14 +333,16 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
-  block_1:
+      tags:
+        - 'config:field.storage.node.field_research_area_thumbnail'
+  stanford_challenge_areas_block_1:
     display_plugin: block
-    id: block_1
+    id: stanford_challenge_areas_block_1
     display_title: Block
     position: 1
     display_options:
       display_extenders: {  }
+      block_description: 'Challenge Areas List (Block)'
     cache_metadata:
       max-age: -1
       contexts:
@@ -193,4 +350,5 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_research_area_thumbnail'

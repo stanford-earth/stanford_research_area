@@ -23,6 +23,7 @@ dependencies:
   - stanford_paragraph_postcard
   - taxonomy
   - text
+  - ui_patterns_views
   - user
   - video_embed_field
   - viewfield
