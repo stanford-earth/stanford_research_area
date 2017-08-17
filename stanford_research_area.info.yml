@@ -21,6 +21,7 @@ dependencies:
   - scheduler
   - stanford_paragraph_hero_banner
   - stanford_paragraph_postcard
+  - stanford_paragraph_slide
   - taxonomy
   - text
   - ui_patterns_views
