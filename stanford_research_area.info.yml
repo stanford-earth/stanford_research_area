@@ -1,6 +1,6 @@
 name: 'Stanford Research Area Content Type'
 description: 'This is a content type (and associated taxonomy vocabulary) for research and challenge area landing pages.'
-version: 8.x-1.0-alpha1
+version: 8.x-1.0-dev
 type: module
 core: 8.x
 dependencies:
