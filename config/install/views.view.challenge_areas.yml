@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_research_area_thumbnail
@@ -358,6 +358,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_research_area_thumbnail'
+        - extensions
   stanford_challenge_areas_block_1:
     display_plugin: block
     id: stanford_challenge_areas_block_1
@@ -375,3 +376,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_research_area_thumbnail'
+        - extensions
