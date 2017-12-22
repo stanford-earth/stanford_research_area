@@ -1,5 +1,5 @@
 # [Stanford Research Area](https://github.com/stanford-earth/stanford_research_area)
-##### Version: 8.x-1.0-alpha2
+##### Version: 8.x-1.0-dev
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
 
